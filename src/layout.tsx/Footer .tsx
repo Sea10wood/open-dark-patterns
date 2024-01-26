@@ -1,37 +1,44 @@
 import Image from "next/image";
 import Logo from "../../public/favicon.ico";
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className=" dark:bg-gray-900 bg-gray-700 py-6 lg:py-8" style={{ marginLeft: "80px" ,marginRight: "80px"}}>
+    <footer
+      className=" dark:bg-gray-900 bg-gray-700 py-6 lg:py-8"
+      style={{ marginLeft: "80px", marginRight: "80px" }}
+    >
       <div className="p-4">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="" className="flex items-center">
-              <Image
+            <Link href="" className="flex items-center">
+              {/* <Image
                 src={Logo}
                 className="h-8"
                 alt="Logo"
                 width={50}
                 height={50}
                 style={{ marginRight: "0.75rem" }}
-              />
+              /> */}
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
                 Open Dark Patterns
               </span>
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div style={{ marginLeft: "160px" }}>
               <h2 className="mb-6 text-lx font-bold text-gray-900 uppercase dark:text-white ">
                 Contents
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium text-sm "style={{ marginLeft: "5px" }} >
+              <ul
+                className="text-gray-500 dark:text-gray-400 font-medium text-sm "
+                style={{ marginLeft: "5px" }}
+              >
                 <li className="mb-4">
-                  <a href="#" className="hover:underline ">
+                  <Link href="#" className="hover:underline ">
                     Figma
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -40,16 +47,19 @@ const Footer = () => {
                 <h2 className="mb-6 text-lx font-bold text-gray-900 uppercase dark:text-white">
                   Contact
                 </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium text-sm" style={{ marginLeft: "5px" }} >
+                <ul
+                  className="text-gray-500 dark:text-gray-400 font-medium text-sm"
+                  style={{ marginLeft: "5px" }}
+                >
                   <li className="mb-4">
-                    <a href="#" className="hover:underline ">
+                    <Link href="#" className="hover:underline ">
                       Github
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <Link href="#" className="hover:underline">
                       Discord
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
