@@ -14,6 +14,7 @@ import {
   ChatBubbleLeftRightIcon,
   ShareIcon
 } from "@heroicons/react/20/solid";
+import Link from "next/link";
 
 const products = [
   {
@@ -45,7 +46,7 @@ export default function SubScriptionHeader() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Home</span>
             <Image
               src={DarkPatternsSubscription}
@@ -56,7 +57,7 @@ export default function SubScriptionHeader() {
                 `${src}?w=${width}&q=${quality || 75}`
               }
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -101,13 +102,13 @@ export default function SubScriptionHeader() {
                         />
                       </div>
                       <div className="flex-auto">
-                        <a
+                        <Link
                           href={item.href}
                           className="block font-semibold text-gray-900"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
-                        </a>
+                        </Link>
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
@@ -115,7 +116,7 @@ export default function SubScriptionHeader() {
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                   {callsToAction.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
@@ -125,25 +126,25 @@ export default function SubScriptionHeader() {
                         aria-hidden="true"
                       />
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </Popover.Panel>
             </Transition>
           </Popover>
 
-          <a
+          <Link
             href="/contents"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Contents
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             philosophy
-          </a>
+          </Link>
         </Popover.Group>
       </nav>
       <Dialog
@@ -155,7 +156,7 @@ export default function SubScriptionHeader() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Home</span>
               <Image
                 src={DarkPatternsSubscription}
@@ -166,7 +167,7 @@ export default function SubScriptionHeader() {
                   `${src}?w=${width}&q=${quality || 75}`
                 }
               />
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -179,18 +180,18 @@ export default function SubScriptionHeader() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a
+                <Link
                   href="/contents"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contents
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   philosophy
-                </a>
+                </Link>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
