@@ -17,7 +17,7 @@ export default function Home() {
           <DarkPatternsDescription />
 
           <Card
-            href="/contents"
+            href="/subscription"
             imageSrc={DarkPatternsSubscription}
             alt="DarkPatternsSubscriptionIcon"
             title="オープンダークサブスクリプション"

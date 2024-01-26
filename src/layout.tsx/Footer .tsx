@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className=" dark:bg-gray-900 bg-gray-700 py-6 lg:py-8">
+    <footer className=" dark:bg-gray-900 bg-gray-700 py-6 lg:py-8" style={{ marginLeft: "80px" ,marginRight: "80px"}}>
       <div className="p-4">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
